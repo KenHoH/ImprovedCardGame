@@ -1,0 +1,83 @@
+
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+body{
+    background-color: aliceblue;
+}
+.main{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-evenly;
+}
+.main > h1{
+    font-size: 30px;
+}
+
+/* card deck styling */
+.card-deck{
+    background-color: black;
+    height: 400px;
+    width: 400px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    align-items: center;
+    justify-items: center;
+
+    border-radius: 5%;;
+}
+.card {
+    height: 60px; width: 60px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+/* flipping animation */
+.front, .back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%; width: 100%;
+    border: beige 1px solid;
+    border-radius: 5px;
+
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front {
+    background-color: gray;
+}
+.back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+.showBack{
+    transform: rotateY(180deg);
+}
+.correct {
+    background-color : greenyellow;
+}
+.wrong{
+    background-color: pink;
+}
+/* button styling */
+.button{
+    display: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: beige;
+    border: gray solid 1px;
+    font-size: 15px;
+}
